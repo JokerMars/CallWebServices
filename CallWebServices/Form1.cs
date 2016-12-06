@@ -16,5 +16,12 @@ namespace CallWebServices
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ServiceReference1.ServiceSoapClient wwc = new ServiceReference1.ServiceSoapClient();
+            MessageBox.Show(wwc.HelloWorld());
+            MessageBox.Show(wwc.Add(3, 4).ToString());
+        }
     }
 }
